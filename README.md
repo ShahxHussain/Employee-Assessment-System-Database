@@ -2,6 +2,33 @@
 
 This is an Employee Management System project that allows you to manage employees, courses, enrollments, grades, and more. It provides functionalities to track employee enrollments in courses, record their grades, and generate summary reports.
 <br>
+<h3>Queries Include in .sql file</h3>
+<ul>
+a.	Pattern match search condition
+  <br>
+b.	Reading of Data from multiple tables
+   <br>
+c.	Sorting Results (ORDER BY Clause)
+   <br>
+d.	Using the SQL Aggregate Functions
+   <br>
+e.	Restricting groupings (HAVING clause)
+   <br>
+f.	Queries containing ANY and ALL keywords
+   <br>
+g.	Sub-queries or nested queries 
+   <br>
+h.	Simple join, Sorting a join, Three-table join, Outer joins
+   <br>
+i.	Create Updateable Views
+   <br>
+j.	Modifying views
+ <br>
+
+  
+</ul>
+
+
 ## Table of Contents
 - [Features](#features)
 - [Features](#features)
