@@ -61,7 +61,7 @@ The project's database schema consists of the following tables:
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/ShahxHussain/employee-management-system.git`
+1. Clone the repository: `git clone https://github.com/ShahxHussain/Employee-Assessment-System-Database.git`
 2. Set up a database server (e.g., MySQL, PostgreSQL).
 3. Create a new database.
 4. Import the database schema and sample data from the SQL script provided.
