@@ -333,7 +333,7 @@ WHERE employee_id IN (
   )
 );
 
---Query to retrieve courses with at least one employee who achieved a perfect score (100) in the project:
+--Query to retrieve courses in which an employee  achieved a perfect score (100) in the project:
 SELECT course_id, course_name
 FROM Courses
 WHERE course_id IN (
@@ -371,6 +371,12 @@ JOIN Courses C ON I.instructor_id = C.instructor_id;
 
 --SORTING A JOIN
 
+--Retrieve the instructors and the courses they teach, sorted by the course names in ascending order:
+SELECT I.instructor_id, I.instructor_name, C.course_name
+FROM Instructors I
+JOIN Courses C ON I.instructor_id = C.instructor_id
+ORDER BY C.course_name ASC;
+
 --Retrieve the employees and their corresponding course names, sorted by the employee names in descending order:
 SELECT E.employee_id, E.employee_name, C.course_name
 FROM Employees E
@@ -378,11 +384,6 @@ JOIN Enrollments EN ON E.employee_id = EN.employee_id
 JOIN Courses C ON EN.course_id = C.course_id
 ORDER BY E.employee_name DESC;
 
---Retrieve the instructors and the courses they teach, sorted by the course names in ascending order:
-SELECT I.instructor_id, I.instructor_name, C.course_name
-FROM Instructors I
-JOIN Courses C ON I.instructor_id = C.instructor_id
-ORDER BY C.course_name ASC;
 
 --THREE TABLE JOIN
 
@@ -406,18 +407,26 @@ FROM Courses C
 LEFT JOIN Instructors I ON C.instructor_id = I.instructor_id;
 
 
-----i         CREATING UPDATABLE VIEWS
+--i         CREATING UPDATABLE VIEWS
 
---CREATE VIEW EmployeeSummary AS
---SELECT employee_name
---FROM Employees;
+--CREATE VIEW UpdatableCoursesView AS
+--SELECT course_id, course_name, instructor_id, start_date, end_date
+--FROM Courses;
+
+--In SQL Server Management Studio (SSMS),
+--when you want to execute a CREATE VIEW statement as a standalone batch, it must be the only statement in that batch.
+
+--Here's how you can create the updatable view in SSMS:
+
+--    Open a new query window in SSMS.
+--    Paste the following CREATE VIEW statement into the query and then Execute
 
 
-----j         MODIFYING VIEWS
----- One Extra Column Added
---ALTER VIEW EmployeeSummary AS
---SELECT employee_name, employee_id
---FROM Employees;
+--j         MODIFYING VIEWS
+-- Three Extra Column Added
+--CREATE VIEW UpdatableCoursesView AS
+--SELECT course_id, course_name, instructor_id, start_date, end_date
+--FROM Courses;
 
 
 
